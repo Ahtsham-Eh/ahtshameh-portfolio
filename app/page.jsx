@@ -4,7 +4,6 @@ import { useActiveSection } from "@/app/context/ActiveSectionContext";
 import Navbar from "@/comps/Navbar";
 import Home from "@/comps/home";
 import About from "@/comps/about";
-import Sidebar from "@/comps/sidebar";
 import Projects from "@/comps/projects";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -21,10 +20,6 @@ export default function Page() {
     <div className="min-h-screen w-full bg-linear-to-br from-black via-zinc-900 to-gray-800 text-white relative overflow-hidden">
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
-      </div>
-
-      <div className="fixed top-72 left-0 z-40">
-        <Sidebar />
       </div>
 
       <div className="pt-24 flex justify-center items-center h-screen">
