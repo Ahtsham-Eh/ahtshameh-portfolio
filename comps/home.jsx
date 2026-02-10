@@ -45,9 +45,16 @@ const Home = () => {
           }}
         >
           <motion.h1
-            className='text-center font-extrabold text-5xl sm:text-7xl lg:text-9xl text-gray-800 relative'
+            className="
+              text-center font-extrabold text-5xl sm:text-7xl lg:text-9xl text-gray-800 relative
+              [--stroke:0.25px] sm:[--stroke:1px]
+            "
             animate={{
-              WebkitTextStroke: ["1px #ff0000", "1px #ffffff", "1px #ff0000"],
+              WebkitTextStroke: [
+                "var(--stroke) #ff0000",
+                "var(--stroke) #ffffff",
+                "var(--stroke) #ff0000",
+              ],
             }}
             transition={{
               duration: 7,

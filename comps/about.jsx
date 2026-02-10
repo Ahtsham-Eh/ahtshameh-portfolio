@@ -19,27 +19,28 @@ const About = () => {
       id: 1,
       title: "Introduction",
       icon: "https://cdn.lordicon.com/rzsnbiaw.json",
-      info: "Hi! I’m a creative full-stack developer and digital designer crafting premium web experiences, striking graphics, and cinematic video content. I combine clean, high-performance code with strong visuals to turn ideas into impactful digital products."
+      info: "I’m AhtshamEh, a passionate and creative video editor specializing in short-form and long-form content. With a keen eye for detail and a flair for storytelling, I bring visuals to life, turning ideas into engaging cinematic experiences."
     },
     {
       id: 2,
       title: "Skills",
       icon: "https://cdn.lordicon.com/vrexohmd.json",
-      info: "I build powerful digital experiences where code meets creativity. As a Full Stack Developer and Creative Designer, I craft fast, scalable web apps using React, Next.js, and Node.js, complemented by eye-catching designs and polished video edits. My goal is to turn ideas into visually stunning, high-performance products that users love."
+      info: "As a dedicated video editor, I blend creativity with technical expertise to craft visually compelling stories. My work spans multiple genres including social media content, promotional videos, and cinematic edits. I’m committed to delivering high-quality edits that resonate with audiences and elevate the brand or project."
     },
     {
       id: 3,
       title: "Experience",
       icon: "https://cdn.lordicon.com/twpfmtiv.json",
-      info: "I create modern digital experiences through web development, graphic design, and video editing. From fast, scalable React & Next.js websites to visually engaging designs and polished videos, I focus on quality, performance, and user experience."
+      info: "Edited videos with cinematic cuts, smooth transitions, color grading, and engaging storytelling for social media. Delivered polished edits meeting client vision and deadlines. Produced engaging YouTube & TikTok content with strong storytelling and motion graphics."
     },
   ];
 
   return (
     <div className="relative w-full min-h-screen text-white overflow-hidden">
 
+      {/* Background gradient */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-linear-to-r from-teal-300 via-gray-700 to-gray-950 animate-gradientani blur-2xl opacity-70"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-gray-800 via-gray-950 to-gray-800 animate-gradientani blur-2xl opacity-70"></div>
       </div>
 
       <style jsx>{`
@@ -68,6 +69,8 @@ const About = () => {
                 key={box.id}
                 onClick={() => setActiveBox(isActive ? null : box.id)}
                 layout
+                whileHover={{ scale: 1.05, y: -6 }}
+                transition={{ type: "spring", stiffness: 200, damping: 12 }}
                 animate={{
                   width: "100%",
                   maxWidth: isActive ? 620 : 330,
@@ -79,13 +82,19 @@ const About = () => {
                       ? 160
                       : 300,
                   zIndex: isActive ? 50 : 5,
-                  scale: isActive ? 1.03 : 1,
                   boxShadow: isActive
-                    ? "0 0 40px 10px rgba(255,255,255,0.3), 0 0 80px 20px rgba(199,31,22,0.6)"
-                    : "0 0 10px 1px rgba(255,255,255,0.15)",
+                    ? box.id === 1
+                      ? "0 0 20px 4px rgba(0, 255, 255, 0.3)"
+                      : box.id === 2
+                      ? "0 0 20px 4px rgba(128, 128, 128, 0.3)"
+                      : "0 0 20px 4px rgba(255, 0, 0, 0.3)"
+                    : box.id === 1
+                      ? "0 0 8px 2px rgba(0, 255, 255, 0.2)"
+                      : box.id === 2
+                      ? "0 0 8px 2px rgba(128, 128, 128, 0.2)"
+                      : "0 0 8px 2px rgba(255, 0, 0, 0.2)",
                 }}
-                transition={{ duration: 0.45, ease: "easeInOut" }}
-                className="border border-white rounded-xl bg-black/30 flex flex-col lg:flex-row items-center justify-center overflow-hidden relative cursor-pointer backdrop-blur-sm w-full sm:w-[90%] p-4"
+                className="group border border-white rounded-xl bg-black/30 flex flex-col lg:flex-row items-center justify-center overflow-hidden relative cursor-pointer backdrop-blur-sm w-full sm:w-[90%] p-4"
               >
                 <motion.div
                   animate={{
@@ -102,10 +111,11 @@ const About = () => {
                   </h1>
                   <lord-icon
                     src={box.icon}
+                    target=".group"
                     trigger="hover"
-                    stroke="bold"
-                    colors="primary:#e4e4e4,secondary:#c71f16"
                     style={{ width: "80px", height: "80px" }}
+                    colors="primary:#e4e4e4,secondary:#c71f16"
+                    className="group-hover"
                   ></lord-icon>
                 </motion.div>
 

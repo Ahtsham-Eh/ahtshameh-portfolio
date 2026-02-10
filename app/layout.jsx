@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "AhtshamEh - Welcome to my Portfolio",
+  title: "AhtshamEh",
   description:
-    "Portfolio of Ahtsham, a Full Stack Web Developer specializing in React, Next.js, Node.js, and Tailwind CSS.",
-icons: {
-  icon: "/profile.png",
-},
+    "Portfolio of AhtshamEh, Professional Video Editor | Showcasing cinematic storytelling, social media content creation, motion graphics, and creative post-production. Explore professional short-form and long-form videos optimized for YouTube, TikTok, and Instagram..",
+  icons: {
+    icon: "/toji.png",
+  },
 };
 
 export default function RootLayout({ children }) {

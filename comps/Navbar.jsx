@@ -11,14 +11,15 @@ const ResponsiveNavbar = () => {
   const navItems = [
     { id: "home", label: "Home", icon: "https://cdn.lordicon.com/rpvomrgr.json", state: "hover-partial-roll" },
     { id: "about", label: "About", icon: "https://cdn.lordicon.com/vrexohmd.json", state: "in-reveal" },
-    { id: "projects", label: "Projects", icon: "https://cdn.lordicon.com/eeolefdw.json", state: "morph-code" },
+    { id: "projects", label: "Projects", icon: "https://cdn.lordicon.com/zcpmxjfa.json", state: "morph-code" },
   ]
 
   const socials = [
     { id: "linkedin", link: "https://www.linkedin.com/in/muhammad-ehtsham-b71546387/", icon: "https://cdn.lordicon.com/rqdhcgcm.json", state: "hover-draw" },
-    { id: "fiverr", link: "https://www.fiverr.com/users/ahtsham_eh", icon: "https://cdn.lordicon.com/jxcoxfau.json", state: "morph-alone" },
-    { id: "github", link: "https://github.com/Ahtsham-Eh", icon: "https://cdn.lordicon.com/acgiczyg.json", state: "hover-draw" },
+    { id: "fiverr", link: "https://www.fiverr.com/users/ahtsham_eh", icon: "https://cdn.lordicon.com/jxcoxfau.json", state: "in" },
+    { id: "tiktok", link: "https://www.tiktok.com/@ahtsham_eh", icon: "https://cdn.lordicon.com/ktoyifaz.json", state: "hover-dots" },
     { id: "instagram", link: "https://www.instagram.com/ahtshameh", icon: "https://cdn.lordicon.com/lljlideu.json", state: "hover-rotate" },
+    { id: "youtube", link: "https://www.youtube.com/@AhtshamEh", icon: "https://cdn.lordicon.com/rpswgzgb.json", state: "hover-rotate" },
   ]
 
   useEffect(() => {
@@ -36,16 +37,13 @@ const ResponsiveNavbar = () => {
           initial={{ filter: "drop-shadow(0 0 8px #ffffff)" }}
           animate={{ filter: ["drop-shadow(0 0 10px #ffffff)", "drop-shadow(0 0 18px #ffffff)", "drop-shadow(0 0 12px #ffffff)"] }}
           transition={{ duration: 2.7, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <motion.span className="text-gray-300 inline-block" animate={{ x: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>&lt;</motion.span>
-          <motion.span
+        >          <motion.span
             className="bg-linear-to-r from-white to-red-500 inline-block bg-clip-text text-transparent"
             animate={{ letterSpacing: ["0px", "1px", "0px"] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           >
             AhtshamEh
           </motion.span>
-          <motion.span className="text-red-500 inline-block" animate={{ rotate: [0, 5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} />&gt;
         </motion.h1>
 
         <ul className="flex gap-8 text-white">
