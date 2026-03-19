@@ -17,7 +17,7 @@ const ResponsiveNavbar = () => {
   const socials = [
     { id: "linkedin", link: "https://www.linkedin.com/in/muhammad-ehtsham-b71546387/", icon: "https://cdn.lordicon.com/rqdhcgcm.json", state: "hover-draw" },
     { id: "fiverr", link: "https://www.fiverr.com/users/ahtsham_eh", icon: "https://cdn.lordicon.com/jxcoxfau.json", state: "in" },
-    { id: "tiktok", link: "https://www.tiktok.com/@ahtsham_eh", icon: "https://cdn.lordicon.com/ktoyifaz.json", state: "hover-dots" },
+    { id: "tiktok", link: "https://www.tiktok.com/@ahtshameh", icon: "https://cdn.lordicon.com/ktoyifaz.json", state: "hover-dots" },
     { id: "instagram", link: "https://www.instagram.com/ahtshameh", icon: "https://cdn.lordicon.com/lljlideu.json", state: "hover-rotate" },
     { id: "youtube", link: "https://www.youtube.com/@AhtshamEh", icon: "https://cdn.lordicon.com/rpswgzgb.json", state: "hover-rotate" },
   ]

@@ -31,7 +31,7 @@ const Projects = () => {
             whileHover={{ scale: 1.15, y: -8 }}
             transition={{ type: "spring", stiffness: 200, damping: 12 }}
             onClick={() => window.open(social.link, "_blank")}
-            style={{ boxShadow: defaultShadows[index] }} // colored shadow
+                                                                                                                                                                                               style={{ boxShadow: defaultShadows[index] }} // colored shadow
             className="group flex flex-col items-center justify-center w-28 h-28 bg-gray-900 border border-white rounded-xl cursor-pointer p-2 hover:shadow-lg hover:shadow-white/30"
           >
             <lord-icon
